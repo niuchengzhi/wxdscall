@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "goodslist": "../../component/goodslist/goodslist"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "大商创",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "listtj": "../../component/goodslist/goodslist"
+  },
+  "navigationBarTitleText": "商品详情"
+}

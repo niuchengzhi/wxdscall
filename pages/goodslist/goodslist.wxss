@@ -1,0 +1,84 @@
+/* pages/goodslist/goodslist.wxss */
+.liehead{
+    width: 100%;
+    height: 88rpx;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+}
+.liehead1{
+    width: 80%;
+    margin-top: 14rpx;
+    margin-left: 5%;
+    height: 60rpx;
+    border: 1px solid #ccc;
+    border-radius: 40rpx;
+    position: relative;
+}
+.liehead1 .liehead11{
+    width: 60%;
+    height: 60rpx;
+    line-height: 60rpx;
+    position: absolute;
+    left: 50rpx;
+}
+.liehead .liehead2{
+    width: 5%;
+    height: 60rpx;
+    margin-top: 22rpx;
+    margin-left: 24rpx;
+    font-size: 40rpx;
+    color: #777;
+}
+.dis-box{
+    width: 100%;
+    height: 70rpx;
+    display: flex;
+    line-height: 70rpx;
+    border-bottom: 1px solid #ccc;
+}
+/* .sanjiao::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10rpx solid red;
+    border-left: 10rpx solid transparent;
+    border-right: 10rpx solid transparent;
+} */
+.dis-box .dis-box1{
+    width: 25%;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-left: 40rpx;
+    
+}
+.dis-box .dis-box1.active{
+    color: red;
+}
+/* .prolist{
+    width: 100%;
+    height: 87%;
+    position: absolute;
+    top:160rpx;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.prolist .goods{
+    width: 360rpx;
+    height: 580rpx;
+    background: #fff;
+}
+.prolist .goods .goodsimg{
+    width: 360rpx;
+    height: 360rpx;
+}
+.prolist .goods .goodsimg image{
+    width: 100%;
+    height: 100%;
+} */
+
+ 
+

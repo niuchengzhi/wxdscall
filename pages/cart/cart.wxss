@@ -1,0 +1,129 @@
+/* pages/cart/cart.wxss */
+.cart-wrap{
+    width: 100%;
+    height: 100%;
+    background: #efefef;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.city{
+    width: 95%;
+    margin: 0 auto;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.city .city1{
+    display: flex;
+    color: #777;
+}
+.dele{
+    color: tomato;
+}
+.cart-list{
+  width: 95%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+  margin:0 auto;
+  background:#fff
+}
+.cart-list .cart-icon{
+  width: 10%;
+  text-align: center;
+}
+.cart-list .cart-img image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.cart-list .cart-content{
+  width: 60%;
+}
+.cart-list .cart-content .cart-title{
+  font-size: 24rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.cart-list .cart-content .cart-other{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-list .cart-content .cart-other .cart-num{
+  display: flex;
+}
+.cart-list .cart-content .cart-other .cart-num text{
+  width: 44rpx;
+  height: 44rpx;
+  background-color: #efefef;
+  text-align: center;
+  line-height: 44rpx;
+  display: inline-block
+}
+.cart-list .cart-content .cart-other .cart-num view{
+  height: 44rpx;
+  margin: 0 20rpx;
+}
+.cart-list .cart-content .cart-other .cart-num .dele{
+  margin-left: 40rpx;
+}
+.cart-footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  background: #fff;
+  border-top: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.cart-footer .cart-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88rpx;
+}
+.cart-footer .cart-icon icon{
+  margin-top: 45rpx;
+}
+.cart-footer .gobuy{
+  width: 30%;
+  background: #f44;
+  color: #fff;
+  line-height: 88rpx;
+  text-align: center;
+}
+.nocart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.nocart .ncart1{
+  width: 200rpx;
+  height: 200rpx;
+}
+.nocart .ncart1 image{
+  width: 100%;
+  height: 100%;
+}
+.ncart2{
+  margin-top: 80rpx; 
+  margin-bottom: 50rpx;
+}
+
+
+

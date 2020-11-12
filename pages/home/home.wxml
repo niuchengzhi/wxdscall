@@ -1,0 +1,238 @@
+<view class="home">
+    <view class="home-head" style="background: {{ocolor}}">
+        <input type="view" class="hsou" placeholder="输入搜索关键词" />
+        <text class="hsou1 iconfont icon-sousuo2"></text>
+        <text class="hsou2 iconfont icon-xiaoxi"></text>
+    </view>
+    <view class="nav" style="background: {{ocolor}}">
+        <scroll-view scroll-x="true" scroll-left="{{oLeft}}" scroll-with-animation="true">
+            <view class="tab-nav">
+                <view wx:for="{{newlistDatas}}" wx:key="index" wx:for-item="a"
+                    class="tab-item {{currentIndex==index?'active':''}}" data-current="{{index}}"
+                    bindtap="changeSwiper">
+                    {{a.title}}
+                </view>
+            </view>
+        </scroll-view>
+        <view class="fenlei iconfont icon-fenlei" style="background: {{ocolor}}">
+            分类
+        </view>
+
+    </view>
+
+    <swiper style="height:{{widH-88}}px" current="{{currentIndex}}" bindchange="changeTab" duration="0" >
+        <swiper-item>
+            <scroll-view  scroll-y="true" style="height:{{widH-88}}px" bindscrolltolower="loadMore" >
+
+
+                <view class="home2" style="background: {{ocolor}}"></view>
+                <swiper wx:if="{{flagIndex}}"  class="swiper" autoplay bindchange="changeSwipers" indicator-dots indicator-color="#fff"
+                    indicator-active-color="#ff0" circular="true" interval="2000" duration="500" vertical="" style="overflow:hidden;border-radius:20rpx"
+                    >
+                    <swiper-item wx:for="{{swiperListDatas}}" wx:key="index" wx:for-item="a" style="overflow:hidden;border-radius:20rpx">
+                        <image src="{{a.img}}"></image>
+                    </swiper-item>
+                </swiper>
+                <!-- 首页轮播图下面的nav -->
+                <view class="nav-list">
+
+                    <view class="nav-list-top">
+                        <swiper class="nav-swiper" bindchange="changeNav">
+
+                            <swiper-item class="nav-swiper-item" wx:for="{{swipeNav}}">
+                                <view class="nav-big-img" wx:for="{{item}}" wx:key="index">
+                                    <image class="nav-img" src="{{item.img}}"></image>
+                                    <view class="nav-name">{{item.desc}}</view>
+                                </view>
+                            </swiper-item>
+                        </swiper>
+                    </view>
+                    <!-- 轮播图下面的nav -->
+                    <view class="gdt">
+                        <view class="gdt1 {{flag==0?'active':''}}"></view>
+                        <view class="gdt1 {{flag==1?'active':''}}"></view>
+                        <view class="gdt1 {{flag==2?'active':''}}"></view>
+                    </view>
+                    <view class="xwNav">
+                        <view class="xwNav1">
+                            <image
+                                src="https://x.dscmall.cn/storage/data/gallery_album/177/original_img/177_P_1597978466633.png">
+                            </image>
+                        </view>
+                        <view class="xwNav2">
+                            <swiper autoplay="true" vertical="true" interval="3000" duration="500" circular="true">
+                                <swiper-item wx:for="{{xwNavDatas}}" wx:key="index" wx:for-item="xw">
+                                    {{xw.title}}
+                                </swiper-item>
+                            </swiper>
+                        </view>
+                        <view class="xwNav3">
+                            >
+                        </view>
+                    </view>
+                </view>
+                <view class="hoImg">
+                    <image class=""
+                        src="https://x.dscmall.cn/storage/data/gallery_album/original_img/CPvH5WHHbF0EoG9XjRQbbT3knMVCeEt9DlYGQhJM.png?imageView2/2/format/webp"
+                        mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                </view>
+
+                <view class="count-down">
+                    <view class="miaoSha">
+                        <view class="miaoSha1">
+                            <image
+                                src="https://x.dscmall.cn/storage/data/gallery_album/177/original_img/177_P_1597978468241.png?imageView2/2/format/webp">
+                            </image>
+                        </view>
+                        <view class="miaoSha2" wx:for="{{countDownList}}" wx:key="index">
+                            <view class="ms1">
+                                距结束还剩:
+                            </view>
+                            <view class="ms2">
+                                {{item.hou}}
+                            </view>
+                            <view class="ms3">
+                                :
+                            </view>
+                            <view class="ms4">
+                                {{item.min}}
+                            </view>
+                            <view class="ms5">
+                                :
+                            </view>
+                            <view class="ms6">
+                                {{item.sec}}
+                            </view>
+                        </view>
+
+                    </view>
+               
+            <view class="header-time-slot">
+                <view class="header-time1 {{now==index?'active':''}}" wx:for="{{tabTime}}" wx:key="index" wx:for-item="list" bindtap="tabChange" data-current="{{index}}" data-item="{{list.id}}">
+                   <view class="time1">
+                       {{list.title}}
+                   </view>
+                      <view class="time2">
+                            {{list.id==27?"抢购中":"即将开始"}}
+                      </view>
+                </view>    
+            </view>
+            <scroll-view class="swiper-container {{now==index?'show':''}}" scroll-x="true" scroll-with-animation="false">
+                <view class="spike-swiper-slide " wx:for="{{lists}}" wx:key="index" wx:for-item="lists">
+                    <view class="timage">
+                        <image class="" src="{{lists.goods_thumb}}" ></image>
+                    </view>
+                      <view class="ttext1">
+                          {{lists.goods_name}}
+                      </view>
+                        <view class="ttext2">
+                       ￥{{lists.sec_price}}
+                        </view>
+                        <view class="ttext3" style="text-decoration:line-through;">
+                            ￥{{lists.market_price}}
+                        </view>
+                </view>
+            </scroll-view>
+            <view class="Tabd">
+                查看更多秒杀产品>
+            </view>
+              </view> 
+              <view class="visual-team">
+                  <view class="header-title">
+                      <view class="htitle1">
+                          拼团专区
+                      </view>
+                      <view class="htitle2">
+                          拼着买更实惠
+                      </view>
+                      <image class="himage" src="../../images/himage.png">
+                      </image>
+                  </view>
+                  <scroll-view class="floor-content" scroll-x="true">
+                      <view class="fc1" wx:for="{{pintDatas}}" wx:key="index">
+                          <view class="fcimage">
+                          <image class="" src="{{item.goods_thumb}}" >     
+                          </image>
+                      </view>
+                      <view class="fctext" >
+                          {{item.goods_name}}
+                      </view>
+                        <view class="fcimage1">
+                            <image class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3NpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4OTA3NTc5Ni0wZTQwLTRkMWUtYWI0Zi0wZTI0ZWYzMmU5Y2IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODg3Q0Y0NTBFMjA4MTFFQUFDMERBQzY1NjBBRTk1QTkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODg3Q0Y0NEZFMjA4MTFFQUFDMERBQzY1NjBBRTk1QTkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDYxMjI3YWEtNjA5Zi00ZDA0LWFiOGQtYWJhZjZjZWYwZWI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjg5MDc1Nzk2LTBlNDAtNGQxZS1hYjRmLTBlMjRlZjMyZTljYiIvPiA8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">
+                                
+                            </image>
+                            ￥{{item.team_price}}
+                        </view>
+                        <view class="fctext2">
+                            {{item.shop_price}}
+                        </view>
+                      </view>
+                   </scroll-view>
+              </view>
+                 <view class="chaoliu">
+                     <image class="" src="https://x.dscmall.cn/storage/data/gallery_album/original_img/2xrOpGBonnFxQRzbgIEDM55NFSh0YHuTlQtap6Df.jpeg?imageView2/2/format/webp">
+                         <scroll-view class="chaoliuy" scroll-x="true">
+                           <view class="chaoliuy1">
+                               <image class="" src="https://img14.360buyimg.com/n1/s800x800_jfs/t1/111237/22/12261/71627/5f0e935fE3ebba938/6713341b3b17ffd5.jpg?imageView2/2/format/webp" >
+                               </image>
+                               <view class="chaoliuy2">
+                                   <view class="chaoliu21">
+                                    beats Beats Studio3 Wireless苹果魔音耳机头戴式录音师3无线蓝牙降噪耳麦 魅影灰（6期分期免息） 通用版
+                                   </view>
+                                     <view class="chaoliu22">
+                                         ￥198.00
+                                     </view>
+                                       
+                               </view>
+                                 
+                           </view>
+                               
+                         </scroll-view>
+                     </image>
+                 </view>
+                 <view class="xhxtab" >
+                     <view class="tab {{xhxtabIndex==index?'active':''}}" wx:for="{{xhtabDatas}}" wx:key="index" data-index="{{index}}" bindtap="xhxtab" data-type="{{item.type}}">
+                         <view class="hxtab1">
+                         {{item.jing}}
+                     </view>
+                     <view class="hxtab2 ">
+                         {{item.wei}}
+                     </view>
+                     </view>
+                     
+                     </view>   
+                       
+                 
+                 <view >
+                     <goodslist bestListDatas="{{bestListDatas}}"/>
+                 </view>
+                      
+            </scroll-view>
+        </swiper-item>
+
+
+        <swiper-item>
+            1
+        </swiper-item>
+        <swiper-item>
+            2
+        </swiper-item>
+        <swiper-item>
+            <view class="home1">3</view>
+        </swiper-item>
+        <swiper-item>
+            <view class="home1">4</view>
+        </swiper-item>
+        <swiper-item>
+            <view class="home1">5</view>
+        </swiper-item>
+        <swiper-item>
+            <view class="home1">6</view>
+        </swiper-item>
+        <swiper-item>
+            <view class="home1">7</view>
+        </swiper-item>
+    </swiper>
+
+</view>

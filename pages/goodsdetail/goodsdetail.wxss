@@ -1,0 +1,571 @@
+/* pages/goodsdetail/goodsdetail.wxss */
+.con_main{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #efefef;
+}
+.con_main .xqnav{
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+    border-top: 2px solid #ccc;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.con_main .xqnav .xqnav1{
+    width: 25%;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+}
+.con_main .xqnav .xqnav1.active{
+    color: tomato;
+    border-bottom: 2px solid tomato;
+}
+.con_main .xqswiper{
+    width: 100%;
+    height: 700rpx;
+    /* margin-top: 92rpx; */
+}
+.con_main .xqswiper image{
+    width: 100%;
+    height: 100%;
+}
+.con_main .xqlist {
+    width: 100%;
+    background: #fff;
+}
+.con_main .xqlist .goods-price{
+    width: 95%;
+    height: 100rpx;
+    margin: 0 auto; 
+    display: flex;
+    line-height: 100rpx;   
+}
+.con_main .xqlist .goods-price .goods-price1{
+    font-size: 48rpx;
+    font-weight: 700;
+    color: rgb(242, 14, 40);
+}
+.con_main .xqlist .goods-price .goods-price2{
+    font-size: 28rpx;
+     color: rgb(153, 153, 153);
+      vertical-align: text-bottom;
+       margin-left: 8px;
+       text-decoration: line-through;
+}
+.hig-vip{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    overflow: hidden;
+}
+.hig-vip .hv{
+    width: 90%;
+    height: 80rpx;
+    margin: 10rpx auto;
+    border-radius: 50rpx;
+    background: #efefef;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.hig-vip .hv .hig-vip1{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+}
+.hig-vip .hv .hig-vip1 image{
+    width: 100%;
+    height: 100%; 
+}
+.hig-vip .hv .hig-vip2{
+    font-size: 26rpx;
+    margin-left: 30rpx;
+}
+.hig-vip .hv .hig-vip3{
+    width: 160rpx;
+    height: 48rpx;
+    border-radius: 30rpx;
+    background: #000;
+     color: #e3c49e;
+     font-size: 24rpx;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     margin-left: 20rpx;
+     padding-top: 8rpx;
+     box-sizing: border-box;
+}
+.goods_title{
+    width: 100%;
+    height: 110rpx;
+    background: #fff;
+    overflow: hidden;
+}
+.goods_title .goods_title1{
+    width: 90%;
+    margin: 10rpx auto;
+    font-size: 30rpx;
+    line-height: 42rpx;
+    max-height: 100rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.goods_outer{
+    width: 100%;
+    height: 60rpx;
+    display: flex;
+    background: #fff;
+}
+.goods_outer .goods_outer1{
+    flex: 1;
+    font-size: 28rpx;
+    color: #999;
+    text-align: center;
+}
+.van-cell{
+    width: 100%;
+    height: 100rpx;
+    margin-top: 10rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.van-cell .van-cell1{
+    width: 20%;
+    text-align: center;
+    color: #999;
+}
+.van-cell .van-cell2{
+    width: 70%;
+    text-align: center;
+    color: #000;
+}
+.yixuan{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-top: 10rpx;
+}
+.yixuan .yixuan1{
+    width: 18%;
+    text-align: center;
+    color: #999;
+}
+.yixuan .yixuan2{
+    width: 14%;
+    text-align: center;
+    color: #000;
+}
+.jiantou{
+    width: 65%;
+    color: #999;
+    text-align: right;
+}
+.mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 99;
+}
+.screen-wrap{
+  width: 100%;
+  height:440rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+}
+.screen-wrap .close{
+  height: 60rpx;
+  text-align: right;
+  margin-right: 20rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.screen-wrap .screen-content{
+  width: 100%;
+  padding-top: 1rpx;
+}
+.screen-wrap .screen-content .screen-goods{
+  width: 100%;
+  position: relative;
+}
+.screen-wrap .screen-content .screen-goods .goods-img{
+  width: 180rpx;
+  height: 180rpx;
+  border:2rpx solid #ccc;
+  position: absolute;
+  top: -100rpx;
+  left: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 5px -5px 3px #efefef,-5px -5px 3px #efefef;
+}
+.screen-wrap .screen-content .screen-goods .goods-img image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.screen-wrap .screen-content .screen-goods  .goods-title{
+  left: 255rpx;
+  position: absolute;
+  top: -40rpx;
+  width: 56%;
+}
+.screen-wrap .screen-content .screen-goods  .goods-title .title{
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 34rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.screen-wrap .screen-content .screen-goods  .goods-title .price{
+  font-size: 36rpx;
+  margin-top: 20rpx;
+    color: #f92028;
+}
+.kcun{
+    height:36rpx;
+    color: #888;
+    font-weight: 400;
+    margin-top:10rpx;
+    font-size:24rpx
+}
+.screen-wrap .screen-content .buy-warp{
+    margin-top: 184rpx;
+    display: flex;
+    justify-content: space-between;
+    height: 100rpx;
+    align-items: center;
+  }
+.screen-wrap .screen-content .buy-warp .buy-num{
+  margin-left: 20rpx;
+  color: #888;
+  font-size: 28rpx;
+}
+.screen-wrap .screen-content .buy-warp .buy-add{
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+}
+.screen-wrap .screen-content .buy-warp .buy-add text{
+  background-color: #efefef;
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.screen-wrap .screen-content .buy{
+  position: absolute;
+  bottom: 0;
+  height: 100rpx;
+  background-color: pink;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 100rpx;
+}
+.screen-wrap .screen-content view{
+  flex: 1;
+}
+.screen-wrap .screen-content .buy-btn{
+    background-color: #ff976a;
+  color: #fff;
+  height: 100rpx;
+}
+.screen-wrap .screen-content .buy-cart{
+  background-color: #f55;
+  color: #fff;
+  height: 100rpx;
+}
+.szhi{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+}
+.szhi .szhi1{
+    width: 45%;
+    text-align: center;
+    color: #888;
+}
+.szhi .szhi2{
+    width: 122%;
+    text-align: center;
+    color: #000;
+    margin-left: -52rpx;
+}
+.szhi .szhi3{
+    margin-right: 20rpx;
+}
+.yfei{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.yfei .yfei1{
+    width: 18%;
+    color: #888;
+    text-align: center;
+}
+.yfei .yfei2{
+    width: 19%;
+    color: tomato;
+    text-align: center;
+}
+.qjian{
+    width: 100%;
+    height: 220rpx;
+    margin-top: 10rpx;
+    background: #fff;
+    overflow: hidden;
+}
+.qjian .qjians{
+    width: 95%;
+    height: 120rpx;
+    margin: 10rpx auto;
+    display: flex;
+    align-items: center;
+}
+.qjian .qjians .qjiansl{
+    width: 104rpx;
+    height: 104rpx;
+    border: 4rpx solid #ccc;
+}
+.qjian .qjians .qjiansl image{
+    width: 100%;
+    height: 100%;
+}
+.qjian .qjians .qjiansz{
+    width: 400rpx;
+    margin-left: 30rpx;
+}
+.qjian .qjians .qjiansz .qjiansz2{
+    color: #999;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-top: 15rpx;
+}
+.qjian .qjians .qjiansr{
+    width: 160rpx;
+    height: 70rpx;
+    border: 1px solid #ccc;
+    line-height: 70rpx;
+    text-align: center;
+}
+.qjian .qjianx{
+    width: 95%;
+    height: 80rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.qjian .qjianx .qjianxl{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 20rpx;
+}
+.qjian .qjianx .qjianxz{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 20rpx;
+}
+.qjian .qjianx .qjianxr{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 20rpx;
+}
+.qjianxl1{
+    font-size: 26rpx;
+    color: #777;
+}
+.qjian .qjianx .qjianxl .qjianxl2{
+    color: #f92028;
+    font-size: 26rpx;
+}
+.qjian .qjianx .qjianxl .qjianxl3{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 26rpx;
+    background: #f92028;
+    text-align: center;
+    margin-top: 30rpx;
+}
+.qjian .qjianx .qjianxz .qjianxz2{
+    color: #13ab53;
+    font-size: 26rpx;
+}
+.qjian .qjianx .qjianxr .qjianxr2{
+    color: #f447c9;
+    font-size: 26rpx;
+}
+.qjian .qjianx .qjianxz .qjianxz3{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 26rpx;
+    background: #13ab53;
+    text-align: center;
+    margin-top: 30rpx;
+}
+.qjian .qjianx .qjianxr .qjianxr3{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 26rpx;
+    background: #f447c9;
+    text-align: center;
+    margin-top: 30rpx; 
+}
+.xiangqing{
+    width: 100%;
+    height: 90rpx;
+    background: #fff;
+    margin-top: 10rpx;
+    display: flex;
+    align-items: center;
+}
+.xiangqing .xiangqing1{
+    flex: 1;
+    text-align: center;
+    height: 90rpx;
+    line-height :90rpx; 
+}
+.xiangqing .xiangqing1.active{
+    color: #f44;
+    border-bottom: 1px solid #f44;
+}
+.xiangqing .xiangqing2{
+    flex: 1;
+    text-align: center;
+    height: 90rpx;
+    line-height :90rpx; 
+}
+.gouwu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: column;
+}
+.gouwu .gouwu1{
+    width: 112rpx;
+    height: 100rpx;
+    text-align: center;
+    margin-top: 24rpx;
+}
+.gouwu .gouwu2{
+    width: 112rpx;
+    height: 100rpx;
+    text-align: center;
+    margin-top: 24rpx;
+}
+.gouwu .gouwu3{
+    width: 112rpx;
+    height: 100rpx;
+    text-align: center;
+    margin-top: 24rpx;
+    position: relative;
+}
+.gouwu .gouwu4{
+    width: 202rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.gouwu .gouwu5{
+    width: 202rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.xiaoxi,.shoucang,.gouwuche{
+    font-size: 40rpx;
+}
+.xiaoxi1,.shoucang1,.gwu{
+    color: #666;
+    font-size: 20rpx;
+}
+.gouwu4{
+    color: #fff;
+    background-color: #f44;
+}
+.gouwu5{
+    color: #fff;
+    background-color: #ff976a;
+}
+.math{
+    min-width: 30rpx;
+    padding: 5rpx;
+     height: 30rpx;
+    background: #f00;
+    color: #fff;
+    position: absolute;
+    z-index: 99;
+    top: -10rpx;
+    font-size: 24rpx;
+    right: 10rpx;
+    border-radius: 50%;
+}
+.kf{
+  height: 100rpx;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  opacity: 0;  
+}
+
+
+
+
+
+
+
+
+
+
+

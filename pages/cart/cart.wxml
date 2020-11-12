@@ -1,0 +1,63 @@
+<scroll-view scroll-y="true" class="cart-wrap" style="height:100%" wx:if="{{cart}}">
+  <view class="city" >
+    <view class="city1">
+      <view class="iconfont icon-daishouhuo"></view>
+      <view class="">
+        上海市 上海市 黄浦区
+      </view>
+    </view>
+    <view class="dele">
+      编辑商品
+    </view>
+  </view>
+  
+  <block wx:for="{{cartListDatas}}" wx:key="index" >
+   
+    <view class="cart-list">
+      <view class="cart-icon" bindtap="checkRadio" data-index="{{index}}">
+        <icon type="success_circle" wx:if="{{item.isSelect}}"></icon>
+        <icon type="circle" wx:else></icon>
+      </view>
+      <view class="cart-img">
+        <image src="{{item.goods_img}}"></image>
+      </view>
+      <view class="cart-content">
+        <view class="cart-title">{{item.goods_name}}</view>
+        <view class="cart-other">
+          <view class="cart-price">{{item.shop_price}}</view>
+          <view class="cart-num">
+            <text bindtap="jianCartNum" data-index="{{index}}">-</text>
+            <view>{{item.buyNum}}</view>
+            <text bindtap="addCartNum" data-index="{{index}}">+</text>
+            <view class="iconfont icon-shanchu1 dele" bindtap="deleCart" data-index="{{index}}"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="cart-footer">
+  <view class="cart-icon" bindtap="selectAllFn">
+    <icon type="success_circle" wx:if="{{isSelectAll}}"></icon>
+    <icon type="circle" wx:else></icon>
+    <text>全选</text>
+  </view>
+  <view class="allprice">
+    合计：<text>{{totalPrice}}</text>
+  </view>
+  <view class="gobuy">
+    去结算({{totalNum}})
+  </view>
+</view>
+</scroll-view>
+<scroll-view wx:else style="height:100%">
+  <view class="nocart" >
+  <view class="ncart1">
+    <image class="" src="https://x.dscmall.cn/static/dist/img/cart-empty.png"></image>
+  </view>
+  <view class="ncart2" >
+    您的购物车还是空空的，快去逛逛吧！
+  </view>
+  <button bindtap="shouye">首页</button>
+</view>
+</scroll-view>
+  

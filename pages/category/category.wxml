@@ -1,0 +1,56 @@
+<!--pages/category/category.wxml-->
+<view class="category-page">
+    <view class="search-header">
+        <view class="search">
+            <text class="iconfont icon-sousuo2"></text>
+            <input type="text" placeholder="请输入关键字" placeholder-class="placeholder"></input>
+        </view>
+    </view>
+    <view class="category-left" style="margin-top:88rpx">
+        <block wx:for="{{getCategoryNavList}}" wx:key="index">
+            <view class="category-nav {{index==activeIndex?'active':''}}" data-index="{{index}}" data-id="a{{index}}" bindtap="changeNav">
+                <text>
+                    {{item.cat_name}}
+                </text>
+            </view>
+        </block>
+    </view>
+    <view class="category-right">
+        <scroll-view class="" scroll-y="true" scroll-with-animation="true" bindscroll="scrollPage" style="height:100%" scroll-into-view="{{goId}}">
+             <block wx:for="{{getCategoryContent}}" wx:key="index">
+             <view id="a{{index}}">
+                    
+                
+                <view class="rightimg">
+                    <image class="rimg1" src="{{getCategoryNavList[index].touch_catads}}">
+                    </image>
+                </view>
+                <block wx:for="{{item}}" wx:key="index">
+                        <view class="list-wrap">
+                            <view class="list-title">
+                                <view class="line"></view>
+                                <view class="name">{{item.cat_name}}</view>
+                                <view class="line"></view>
+                            </view>
+                            <view class="list-content">
+                                <block wx:for="{{item.child}}" wx:key="index">
+                                    <navigator class="item" target="" url="/pages/goodslist/goodslist?cat_id={{item.cat_id}}">
+                                        <view class="pic">
+                                            <image src="{{item.touch_icon}}"></image>
+                                        </view>
+                                        <view class="name">
+                                            {{item.cat_name}}
+                                        </view>
+                                    </navigator>
+                                </block>
+                            </view>
+                        </view>
+                    </block>
+           </view>
+                
+            </block>
+        </scroll-view>
+    </view>
+
+
+</view>

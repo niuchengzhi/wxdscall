@@ -1,0 +1,15 @@
+<view style="margin-top:200px">
+  <button bindtap="toLogin">请登录</button>
+</view>
+
+<view class="mask" hidden="{{showMask}}" >
+  <button style="margin-top:200px" open-type="getUserInfo"  bindgetuserinfo="getUserInfoFn">请授权</button>
+</view>
+<view class="mine" hidden="{{showMine}}">
+    <view class="mine1" >
+        <image class="mine12" src="{{imgData}}"></image>
+    </view>
+    <view class="mine2">
+        {{nameData}}
+    </view>
+</view>

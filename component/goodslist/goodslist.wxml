@@ -1,0 +1,14 @@
+<!--component/goodslist/goodslist.wxml-->
+<view class="list-container">
+  <view class="list-wrap">
+    <view class="list-item" wx:for="{{bestListDatas}}" wx:for-item="bestList" wx:key="index">
+    <navigator url="/pages/goodsdetail/goodsdetail?goods_id={{bestList.goods_id}}" >
+      <image src="{{bestList.goods_thumb||bestList.img}}"></image>
+      <view class="title">{{bestList.title||bestList.goods_name}}</view>
+      <view class="price">￥{{bestList.shop_price||bestList.dis_browse_num}}</view>
+</navigator>
+      
+      
+</view>
+</view>
+</view>

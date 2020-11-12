@@ -1,0 +1,48 @@
+<!--pages/goodslist/goodslist.wxml-->
+<scroll-view scroll-y="true" style="height:{{winH}}px" bindscrolltolower="loadMore">
+<view class="liehead">
+    <view class="liehead1">
+        <input class="liehead11" placeholder="输入搜索关键词" placeholder-class="placeholder"></input>
+    </view>
+      <view class="liehead2 iconfont icon-leimupinleifenleileibie"></view>
+</view>
+<view class="dis-box">
+    <view class="dis-box1 {{activeIndex==index?'active':''}}" wx:for="{{listArr}}" wx:key="index" data-index="{{index}}" bindtap="changeList">
+        {{item}}
+     </view>   
+</view>
+
+    
+        <view>
+            <goodslist bestListDatas="{{bestListDatas}}"/>
+        </view>
+          
+</scroll-view>
+
+<!-- <view class="prolist">
+    <view class="goods">
+        <view class="goodsimg">
+            <image class="" src="https://img14.360buyimg.com/n1/s800x800_jfs/t1/118091/1/15926/85759/5f44db1dEda332635/d6959ca23e523096.jpg"/>
+     </view>
+    <view class="pro-info">
+        <view class="twolist-hidden">
+            九阳（Joyoung）豆浆机1.3L免滤双层杯体304级不锈钢家用多功能搅拌机料理机DJ13B-D0
+        </view>
+         <view class="currency-price">
+             ￥339.00
+         </view>
+         <view class="outer">
+             <text class="outer1">
+                 进店
+             </text>
+             <text class="outer2">
+                 1人已购买
+             </text>
+             <text class="outer3 iconfont icon-gouwuche"></text>
+         </view>
+        </view>
+    </view>
+</view> -->
+  
+  
+  

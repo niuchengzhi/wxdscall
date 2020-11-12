@@ -1,0 +1,261 @@
+<import src="/wxParse/wxParse.wxml"></import>
+<view class="con_main">
+    <view class="xqnav" style="opacity:{{opacity}}">
+        <view class="xqnav1 {{activeIndex==index?'active':''}}" wx:for="{{titleArr}}" data-index="{{index}}" wx:key="index" bindtap="changeTab" data-id="detail{{index}}">
+           {{item}} 
+        </view>
+    </view>
+    <scroll-view scroll-y="true" style="height:100%"  bindscroll="scrollFn" scroll-into-view="{{goId}}" scroll-with-animation="true">
+        <view id="detail0">
+            <swiper class="xqswiper" indicator-dots indicator-color="#ccc" autoplay circular="true">
+            <swiper-item class="xqswiper1"  wx:for="{{galleryList}}" wx:key="index">
+                <image src="{{item.img_original}}"></image>
+            </swiper-item>
+        </swiper>
+         <view class="xqlist">
+             <view class="goods-price">
+             <view class="goods-price1">
+                 ￥{{goodsDetailData.shop_price}}
+             </view>
+             <view class="goods-price2">
+                 ￥{{goodsDetailData.market_price}}
+             </view>
+         </view>
+         </view>
+        <view class="hig-vip">
+            <view class="hv">
+                <view class="hig-vip1">
+                <image class="" src="https://x.dscmall.cn/static/dist/img/icon-vip.png"></image>
+            </view>
+               <view class="hig-vip2">
+                   高级VIP享超值优惠价￥179.00
+               </view>
+              <view class="hig-vip3">
+                  <view class="hig-vip31">
+                      立即开通
+                  </view>
+                    <view class="hig-vip32 iconfont icon-jiantou2"></view>
+                </view>
+            </view>
+             </view>
+            <view class="goods_title">
+                 <view class="goods_title1">
+                    {{goodsDetailData.goods_name}}
+                 </view>
+            </view>
+            <view class="goods_outer">
+                <view class="goods_outer1">
+                    累计销量 0
+                </view>
+                  <view class="goods_outer1">
+                    库存500
+                </view>
+                <view class="goods_outer1">
+                    
+                            上海市
+                        
+                            上海市
+                        
+                </view>
+            </view>
+            <view class="van-cell">
+                <view class="van-cell1">
+                    服务：
+                </view>
+                <view class="van-cell2">
+                    
+                        正品保证
+                    
+                        七天无理由退换
+                    
+                        闪速配送
+                    
+                </view>
+                  
+            </view>
+              <view class="yixuan" bindtap="showMaskFn">
+                  <view class="yixuan1">
+                     已选 :
+                  </view>
+                    <view class="yixuan2">
+                        {{xuanzhong}}
+                    </view>
+                    <view class="iconfont icon-jiantou2 jiantou"></view>
+            </view>
+
+            <view class="mask" wx:if="{{showMask}}" >
+                <view class="screen-wrap" wx:if="{{showMask}}" animation="{{animationData}}">
+                    <view class="close" >
+                        <text bindtap="closeMaskFn" class="iconfont icon-chahao"></text>
+                    </view>
+                      <view class="screen-content">
+                          <view class="screen-goods">
+                              <view class="goods-img">
+                                  <image src="{{goodsDetailData.goods_img}}"></image>
+                              </view>
+                              <view class="goods-title">
+                                  <view class="title">
+                                      {{goodsDetailData.goods_name}}
+                                  </view>
+                                    <view class="price">{{goodsDetailData.shop_price}}</view>
+                                    <view class="kcun">
+                                        库存：500
+                                    </view>
+                                        
+                              </view>
+                                  
+                          </view>
+                           <view class="buy-warp">
+                            <view class="buy-num">数量</view>
+                             <view class="buy-add">
+                               <text bindtap="changeNum" data-num="0">-</text>
+                                <view>{{buyNum}}</view>
+                                <text bindtap="changeNum" data-num="1">+</text>
+                                </view>
+                            </view> 
+                            <view class="buy">
+                            <view class="buy-btn">立即购买</view>
+                            <view class="buy-cart" bindtap="addCartOk">加入购物车</view>
+                            </view>
+                      </view>
+                        
+                </view>
+                  
+            </view>
+              <view class="szhi">
+                  <view class="szhi1">
+                      送至：
+                  </view>
+                   <view class="szhi2">
+                       河南省 郑州市 中原区
+                   </view>
+                    <view class="iconfont icon-jiantou2 jiantou"></view>
+                </view>
+               <view class="yfei">
+                   <view class="yfei1">
+                       运费:
+                   </view>
+                  <view class="yfei2">
+                       ￥0.00
+                   </view>   
+               </view>
+                <view class="qjian">
+                    <view class="qjians">
+                        <view class="qjiansl">
+                            <image  src="https://x.dscmall.cn/storage/images/seller_imgs/seller_logo/logo_thumb/1598316246303568918.jpg" />
+                        </view>
+                        <view class="qjiansz">
+                           <view class="qjiansz1">
+                               创造旗舰店
+                           </view>
+                             <view class="qjiansz2">
+                                 10人已关注
+                             </view>
+                                
+                        </view>
+                          
+                         <view class="qjiansr">
+                             进店逛逛
+                         </view>
+                    </view>
+                     <view class="qjianx">
+                         <view class="qjianxl">
+                             <text class="qjianxl1" >
+                                 商品
+                             </text>
+                              <text class="qjianxl2" >
+                                 5分
+                             </text>
+                              <view class="qjianxl3" >
+                                 高
+                             </view>
+                         </view>
+                         <view class="qjianxz">
+                             <text class="qjianxl1" >
+                                 服务
+                             </text>
+                              <text class="qjianxz2" >
+                                 5分
+                             </text>
+                              <view class="qjianxz3" >
+                                 高
+                             </view>
+                         </view>
+                         <view class="qjianxr">
+                             <text class="qjianxl1" >
+                                 时效
+                             </text>
+                              <text class="qjianxr2" >
+                                 5分
+                             </text>
+                              <view class="qjianxr3" >
+                                 高
+                             </view>
+                         </view>
+                           
+                     </view>
+                        
+                </view>
+                  
+        </view>
+         <view id="detail1">
+             <view class="xiangqing">
+                        <view class="xiangqing1 active">
+                            商品详情
+                        </view>
+                          <view class="xiangqing2">
+                            规格参数
+                        </view>
+                  </view>
+                  <view class="xiangqingy" style="margin-left:10rpx;margin-top:2rpx">
+                     <template is="wxParse" data="{{wxParseData:content.nodes}}"/> 
+                  </view>
+                 </view>
+                 <view id="detail2">
+                    <view>商品推荐</view>
+                 <listtj  bestListDatas="{{goodsDetailTJData}}"/>
+                </view>
+                <view id="detail3">
+                <view>商品评论</view>
+                    <view wx:for="{{goodsPJData}}" wx:key="index">
+                <image src="{{item.user_picture}}"></image>
+                <view>{{item.content}}</view>
+      </view>
+    </view>
+
+
+            </scroll-view>
+            <view class="gouwu">
+                <view class="gouwu1">
+                <button class="kf" session-from="{{goodsDetailData.goods_id}}" open-type="contact" size="mini"></button>
+                    <view class="iconfont icon-xiaoxi xiaoxi"></view>
+                     <view class="xiaoxi1">
+                        客服 
+                     </view>
+                </view>
+                 <view class="gouwu2">
+                     <view class="iconfont icon-shoucang1 shoucang"></view>
+                     <view class="shoucang1">
+                        收藏 
+                     </view>
+                 </view>
+                 <view class="gouwu3" bindtap="toCart">
+                     <view class="iconfont icon-gouwuche gouwuche"></view>
+                     <view class="gwu">
+                        购物车 
+                     </view>
+                     <view class="math">
+                           {{yixuan}}    
+                     </view>
+                       
+                 </view>
+                 <view class="gouwu4" bindtap="showMaskFn">
+                     加入购物车
+                 </view>
+                   <view class="gouwu5">
+                     立即购买
+                 </view>
+               </view>
+                
+</view>
+  

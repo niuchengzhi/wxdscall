@@ -1,0 +1,46 @@
+/* component/goodslist/goodslist.wxss */
+.list-container{
+    width: 100%;
+    display: flex;
+   background: #f1f1f1;
+  }
+  .list-wrap{
+    width: 100%;
+    display: flex;
+    margin:10rpx;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .list-wrap .list-item{
+    width: 50%;
+    margin-bottom: 20rpx;
+    height: 540rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;  
+  }
+  .list-wrap .list-item image{
+    width:344rpx;
+    height: 344rpx;
+    
+  }
+  .list-wrap .list-item view{
+    width:344rpx;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    text-align: left;
+    height: 72rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .price{
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    color: tomato;
+    margin-top: 50rpx;
+    margin-left: 100rpx;
+  }
